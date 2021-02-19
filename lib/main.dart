@@ -1,8 +1,12 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
+import 'package:naturesave/core/constans/app/app_constants.dart';
+import 'package:naturesave/core/init/lang/lang_management.dart';
 
-void main() {
-  return runApp(MyApp());
-}
+void main() => runApp(EasyLocalization(
+    child: MyApp(),
+    supportedLocales: LanguageManager.instance.supportedLocales,
+    path: ApplicationConstans.LAN_ASSET_PATH));
 
 class MyApp extends StatelessWidget {
   @override
