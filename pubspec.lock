@@ -216,6 +216,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "2.1.1"
+  flutter_easyloading:
+    dependency: "direct main"
+    description:
+      name: flutter_easyloading
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "2.2.2"
   flutter_localizations:
     dependency: transitive
     description: flutter
@@ -242,6 +249,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.0.11"
+  flutter_spinkit:
+    dependency: transitive
+    description:
+      name: flutter_spinkit
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "4.1.2+1"
   flutter_test:
     dependency: "direct dev"
     description: flutter
@@ -315,16 +329,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "0.6.2"
-<<<<<<< HEAD
-=======
-  json_annotation:
-    dependency: transitive
+  kartal:
+    dependency: "direct main"
     description:
-      name: json_annotation
+      name: kartal
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "3.1.1"
->>>>>>> a004349aa69f535a1706d9d98bca796dd2ecf8ff
+    version: "1.2.0"
   location:
     dependency: "direct main"
     description:
@@ -346,16 +357,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.0.1"
-<<<<<<< HEAD
-=======
-  logging:
+  mask_text_input_formatter:
     dependency: transitive
     description:
-      name: logging
+      name: mask_text_input_formatter
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "0.11.4"
->>>>>>> a004349aa69f535a1706d9d98bca796dd2ecf8ff
+    version: "1.2.1"
   matcher:
     dependency: transitive
     description:
@@ -370,6 +378,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.3.0-nullsafety.3"
+  mime:
+    dependency: transitive
+    description:
+      name: mime
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "0.9.7"
   nested:
     dependency: transitive
     description:
@@ -384,16 +399,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "0.3.0"
-<<<<<<< HEAD
-=======
-  package_config:
+  package_info:
     dependency: transitive
     description:
-      name: package_config
+      name: package_info
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "1.9.3"
->>>>>>> a004349aa69f535a1706d9d98bca796dd2ecf8ff
+    version: "0.4.3+4"
   path:
     dependency: transitive
     description:
@@ -492,8 +504,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "0.25.0"
-<<<<<<< HEAD
-=======
+  share:
+    dependency: transitive
+    description:
+      name: share
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "0.6.5+4"
   shared_preferences:
     dependency: transitive
     description:
@@ -536,21 +553,6 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "0.0.2+3"
-  shelf:
-    dependency: transitive
-    description:
-      name: shelf
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "0.7.9"
-  shelf_web_socket:
-    dependency: transitive
-    description:
-      name: shelf_web_socket
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "0.2.4+1"
->>>>>>> a004349aa69f535a1706d9d98bca796dd2ecf8ff
   sky_engine:
     dependency: transitive
     description: flutter
@@ -640,6 +642,48 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.3.0-nullsafety.3"
+  url_launcher:
+    dependency: transitive
+    description:
+      name: url_launcher
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "5.7.10"
+  url_launcher_linux:
+    dependency: transitive
+    description:
+      name: url_launcher_linux
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "0.0.1+4"
+  url_launcher_macos:
+    dependency: transitive
+    description:
+      name: url_launcher_macos
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "0.0.1+9"
+  url_launcher_platform_interface:
+    dependency: transitive
+    description:
+      name: url_launcher_platform_interface
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "1.0.9"
+  url_launcher_web:
+    dependency: transitive
+    description:
+      name: url_launcher_web
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "0.1.5+3"
+  url_launcher_windows:
+    dependency: transitive
+    description:
+      name: url_launcher_windows
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "0.0.1+3"
   uuid:
     dependency: transitive
     description:
