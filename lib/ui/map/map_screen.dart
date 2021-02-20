@@ -1,15 +1,18 @@
 import 'package:eva_icons_flutter/eva_icons_flutter.dart';
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:naturesave/models/account.dart';
 import 'package:naturesave/viewmodels/account_provider.dart';
+import 'package:provider/provider.dart';
 
 class MapScreen extends StatefulWidget {
   @override
   _MapScreenState createState() => _MapScreenState();
 }
 
-class _MapScreenState extends State<MapScreen> {
+class _MapScreenState extends State<MapScreen>
+    with AutomaticKeepAliveClientMixin {
   AccountProvider _accountProvider;
   List<Account> _allAccounts;
   String _mapStyle;
@@ -18,6 +21,7 @@ class _MapScreenState extends State<MapScreen> {
 
   @override
   Widget build(BuildContext context) {
+    _accountProvider = Provider.of(context);
     return Scaffold(
       body: Stack(
         alignment: Alignment.topCenter,
@@ -49,10 +53,25 @@ class _MapScreenState extends State<MapScreen> {
                         Navigator.of(context).pop();
                       },
                       child: Icon(
-                        EvaIcons.chevronLeftOutline,
-                        size: 40,
+                        FontAwesomeIcons.qrcode,
                       ),
-                    )
+                    ),
+                    Expanded(
+                        child: Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Text(
+                        'Çevrendeki GDK (23)',
+                        textAlign: TextAlign.center,
+                      ),
+                    )),
+                    InkWell(
+                      onTap: () {
+                        Navigator.of(context).pop();
+                      },
+                      child: Icon(
+                        FontAwesomeIcons.qrcode,
+                      ),
+                    ),
                   ],
                 ),
               ),
@@ -70,6 +89,14 @@ class _MapScreenState extends State<MapScreen> {
   );
 
   Set<Marker> _getCurrentMarker() {
+    markers.add(
+      Marker(
+          markerId: MarkerId('qweewq'),
+          position: LatLng(40.742037, 30.3305423)),
+    );
+    return markers.toSet();
+
+    /*
     var index = 0.000;
 
     for (var cAccount in _allAccounts) {
@@ -85,6 +112,8 @@ class _MapScreenState extends State<MapScreen> {
     }
     print(markers.toSet());
     return markers.toSet();
+
+    */
   }
 
   CameraPosition _getCurrentCamera() {
@@ -99,4 +128,8 @@ class _MapScreenState extends State<MapScreen> {
       return _sauLocation;
     }
   }
+
+  @override
+  // TODO: implement wantKeepAlive
+  bool get wantKeepAlive => true;
 }

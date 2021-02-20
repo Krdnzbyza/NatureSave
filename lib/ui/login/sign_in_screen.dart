@@ -124,7 +124,7 @@ class _SignInScreenState extends State<SignInScreen> {
                 end: Alignment.centerRight,
                 colors:
                     isQueryable && _accountProvider.state == AccountState.Idle
-                        ? [Colors.purple, Colors.green]
+                        ? [Colors.lightGreen, Colors.green]
                         : [Colors.grey, Colors.blueGrey])),
         child: _accountProvider.state == AccountState.Idle
             ? Text(

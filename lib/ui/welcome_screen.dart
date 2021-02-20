@@ -36,7 +36,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
       body: isAuthStateChecked
           ? Stack(
               children: [
-                Image.asset('assets/images/city.jpg',
+                Image.asset('asset/images/city.jpg',
                     fit: BoxFit.cover,
                     width: double.infinity,
                     height: double.infinity),
@@ -50,7 +50,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                       end: Alignment.bottomCenter,
                       colors: [
                         Colors.white.withOpacity(0.4),
-                        Colors.purple.withOpacity(0.5)
+                        Colors.green.withOpacity(0.5)
                       ],
                     ),
                   ),
@@ -93,7 +93,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
           child: Padding(
             padding: const EdgeInsets.all(12.0),
             child: Text(
-              'Kaydol',
+              'Giriş Yap',
               style: GoogleFonts.montserrat(color: Colors.green, fontSize: 18),
             ),
           ),
