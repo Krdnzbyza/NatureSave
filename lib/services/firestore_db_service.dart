@@ -99,7 +99,7 @@ class FirestoreDbService {
     });
   }
 
-  Future<bool> signOuttoDatabase() async {
+  Future<bool> stopListener() async {
     try {
       await _accountSubscription.cancel();
       return true;
