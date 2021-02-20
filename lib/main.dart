@@ -22,6 +22,15 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Material App',
       home: RootScreen(),
+      theme: ThemeData.light().copyWith(
+        appBarTheme: AppBarTheme(
+          color: const Color(0xFF1ad760),
+        ),
+        tabBarTheme: TabBarTheme(
+          labelColor: const Color(0xFF1ad760),
+          unselectedLabelColor: const Color(0xFF2d46b9),
+        ),
+      ),
     );
   }
 }
