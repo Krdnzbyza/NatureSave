@@ -53,7 +53,7 @@ class _DonateScreenState extends State<DonateScreen> {
   }
 
   Widget _singleCard(String url, int index) {
-    int cardIndex = index;
+    var cardIndex = index;
     return InkWell(
       borderRadius: BorderRadius.circular(10),
       onTap: () {

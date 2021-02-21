@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_platform_widgets/flutter_platform_widgets.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:naturesave/core/constans/app/global_variables.dart';
-import 'package:naturesave/core/constans/app/local_datas.dart';
 import 'package:naturesave/core/constans/app/time_converter.dart';
 import 'package:naturesave/core/constans/locator.dart';
 import 'package:naturesave/ui/profile/donate_screen.dart';
@@ -16,7 +15,6 @@ class ProfilScreen extends StatefulWidget {
 
 class _ProfilScreenState extends State<ProfilScreen> {
   AccountProvider _accountProvider;
-  final LocalDatas _localDatas = locator.get<LocalDatas>();
   final GlobalVariables _globalVariables = locator.get<GlobalVariables>();
   final TimeConverter _timeConverter = locator.get<TimeConverter>();
 
@@ -223,6 +221,7 @@ class _ProfilScreenState extends State<ProfilScreen> {
       );
 
   void _execDonateScreen() {
-    Navigator.of(context).push(platformPageRoute(context: context,builder: (context) => DonateScreen()));
+    Navigator.of(context).push(platformPageRoute(
+        context: context, builder: (context) => DonateScreen()));
   }
 }

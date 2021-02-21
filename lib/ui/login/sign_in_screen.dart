@@ -1,12 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_phoenix/flutter_phoenix.dart';
 import 'package:flutter_platform_widgets/flutter_platform_widgets.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:naturesave/ui/login/sign_up_screen.dart';
-import 'package:naturesave/ui/root_screen.dart';
-import 'package:naturesave/viewmodels/account_provider.dart';
-import 'package:naturesave/widgets/custom_textfield.dart';
-import 'package:naturesave/widgets/global_widgets.dart';
+import 'sign_up_screen.dart';
+import '../root_screen.dart';
+import '../../viewmodels/account_provider.dart';
+import '../../widgets/custom_textfield.dart';
+import '../../widgets/global_widgets.dart';
 import 'package:provider/provider.dart';
 
 class SignInScreen extends StatefulWidget {

@@ -9,7 +9,6 @@ import 'package:naturesave/models/recycler_box.dart';
 import 'package:naturesave/viewmodels/account_provider.dart';
 import 'package:naturesave/viewmodels/recyclebox_provider.dart';
 import 'package:provider/provider.dart';
-import 'package:qrcode_reader/qrcode_reader.dart';
 
 class MapScreen extends StatefulWidget {
   @override
@@ -248,8 +247,6 @@ class _MapScreenState extends State<MapScreen>
   }
 
   void _execQRScreen() {
-    var futureString = QRCodeReader().scan();
-
     /*
       QR Code Process
     */

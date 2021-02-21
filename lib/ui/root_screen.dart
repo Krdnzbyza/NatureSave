@@ -8,17 +8,14 @@ class RootScreen extends StatefulWidget {
   _RootScreenState createState() => _RootScreenState();
 }
 
-class _RootScreenState extends State<RootScreen> with TickerProviderStateMixin {
+class _RootScreenState extends State<RootScreen> {
   int defaultTabLength = 3;
-  int _selectedPage = 0;
 
   PageController _pageController;
-  TabController _tabController;
 
   @override
   void initState() {
     _pageController = PageController(initialPage: 0);
-    _tabController = TabController(initialIndex: 0, vsync: this, length: 3);
     super.initState();
   }
 

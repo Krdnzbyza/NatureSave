@@ -12,7 +12,6 @@ class LeaderBoardScreen extends StatefulWidget {
 
 class _LeaderBoardScreenState extends State<LeaderBoardScreen> {
   AccountProvider _accountProvider;
-  List<Account> _allAccounts;
 
   @override
   Widget build(BuildContext context) {
