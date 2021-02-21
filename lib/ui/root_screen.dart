@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:naturesave/ui/leader_board.dart/leaderboard_screen.dart';
+import 'package:naturesave/ui/leaderboard/leaderboard_screen.dart';
 import 'package:naturesave/ui/map/map_screen.dart';
 import 'package:naturesave/ui/profile/profile_screen.dart';
 

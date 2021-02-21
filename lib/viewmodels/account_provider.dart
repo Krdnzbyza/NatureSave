@@ -18,9 +18,7 @@ enum AccountState {
 class AccountProvider extends ChangeNotifier {
   String currentUserId;
   Account _currentAccount;
-  List<Account> allManifacturers = [];
-  List<Account> allRetailers = [];
-  List<Account> retailerRequests = [];
+  List<Account> allUsers = [];
   bool isSetupped = false;
   final FirebaseAuthService _authRepository = FirebaseAuthService();
   final FirestoreDbService _databaseRepository = FirestoreDbService();
@@ -43,6 +41,7 @@ class AccountProvider extends ChangeNotifier {
 
   AccountProvider() {
     getCurrentUserId();
+    fetchUsers();
   }
 
   void getCurrentUserId() {
@@ -182,5 +181,13 @@ class AccountProvider extends ChangeNotifier {
         userId: userId, geoPoint: geoPoint, qLimit: limit);
     state = AccountState.Idle;
     return aList;
+  }
+
+  void fetchUsers() {
+    state = AccountState.Fetching;
+    var cList = _databaseRepository.fetchUsers();
+    cList.sort((a, b) => b.point.compareTo(a.point));
+    allUsers = cList;
+    state = AccountState.Idle;
   }
 }

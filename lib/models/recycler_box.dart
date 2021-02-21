@@ -2,7 +2,7 @@ import 'dart:convert';
 
 import 'package:cloud_firestore/cloud_firestore.dart';
 
-class RecyclerBox {
+class RecycleBox {
   String boxId;
   double fulness;
   int city;
@@ -15,7 +15,7 @@ class RecyclerBox {
   Timestamp dateOfStart;
   GeoPoint geoPoint;
   String geohash;
-  RecyclerBox({
+  RecycleBox({
     this.boxId,
     this.fulness,
     this.city,
@@ -30,7 +30,7 @@ class RecyclerBox {
     this.geohash,
   });
 
-  RecyclerBox copyWith({
+  RecycleBox copyWith({
     String boxId,
     double fulness,
     int city,
@@ -44,7 +44,7 @@ class RecyclerBox {
     GeoPoint geoPoint,
     String geohash,
   }) {
-    return RecyclerBox(
+    return RecycleBox(
       boxId: boxId ?? this.boxId,
       fulness: fulness ?? this.fulness,
       city: city ?? this.city,
@@ -77,10 +77,10 @@ class RecyclerBox {
     };
   }
 
-  factory RecyclerBox.fromMap(Map<String, dynamic> map) {
+  factory RecycleBox.fromMap(Map<String, dynamic> map) {
     if (map == null) return null;
 
-    return RecyclerBox(
+    return RecycleBox(
       boxId: map['boxId'],
       fulness: map['fulness'],
       city: map['city'],
@@ -98,8 +98,8 @@ class RecyclerBox {
 
   String toJson() => json.encode(toMap());
 
-  factory RecyclerBox.fromJson(String source) =>
-      RecyclerBox.fromMap(json.decode(source));
+  factory RecycleBox.fromJson(String source) =>
+      RecycleBox.fromMap(json.decode(source));
 
   @override
   String toString() {
@@ -110,7 +110,7 @@ class RecyclerBox {
   bool operator ==(Object o) {
     if (identical(this, o)) return true;
 
-    return o is RecyclerBox &&
+    return o is RecycleBox &&
         o.boxId == boxId &&
         o.fulness == fulness &&
         o.city == city &&

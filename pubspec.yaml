@@ -42,6 +42,7 @@ dependencies:
   pedantic: ^1.9.2
   provider: ^4.3.3
   timeago: ^2.0.27
+  qrcode_reader: ^0.4.4
 
 dev_dependencies:
   flutter_test:

@@ -1,17 +1,19 @@
 import 'dart:async';
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:naturesave/core/constans/app/local_datas.dart';
+import 'package:naturesave/core/constans/locator.dart';
 import 'package:naturesave/extensions/geohash_management.dart';
 import 'package:naturesave/models/account.dart';
 import 'package:naturesave/models/account_query.dart';
+import 'package:naturesave/models/recycler_box.dart';
 import 'package:naturesave/services/location_service.dart';
-
 import 'package:uuid/uuid.dart';
-
 import 'common_api_service.dart';
 
 class FirestoreDbService {
   final FirebaseFirestore _database = FirebaseFirestore.instance;
   final CommonApiService _apiService = CommonApiService();
+  final LocalDatas _localDatas = locator.get<LocalDatas>();
 
   StreamSubscription _accountSubscription;
 
@@ -264,6 +266,22 @@ class FirestoreDbService {
       return allUsers;
     } catch (e, t) {
       _writeErrorMessage('${e} - ${t}');
+      return null;
+    }
+  }
+
+  List<RecycleBox> fetchRecycleBox() {
+    try {
+      return _localDatas.boxList;
+    } catch (e) {
+      return null;
+    }
+  }
+
+  List<Account> fetchUsers() {
+    try {
+      return _localDatas.userList;
+    } catch (e) {
       return null;
     }
   }

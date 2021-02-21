@@ -1,9 +1,14 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:naturesave/models/account.dart';
 import 'package:naturesave/models/recycler_box.dart';
 
 class LocalDatas {
-  static List<RecyclerBox> boxList = [
-    RecyclerBox(
+  static const String _girlAvatar =
+      'https://i.pinimg.com/originals/2d/f7/df/2df7df421c88f37cb0385bb1f55a989c.png';
+  static const String _manAvatar =
+      'https://image.winudf.com/v2/image1/Y29tLmJ1bnR5YXBweC5hdnRhcm1ha2VyX3NjcmVlbl8wXzE1NjM0OTUwODFfMDg3/screen-0.jpg?fakeurl=1&type=.jpg';
+  List<RecycleBox> boxList = [
+    RecycleBox(
         boxId: '0001',
         fulness: 87.2,
         city: 54,
@@ -15,7 +20,7 @@ class LocalDatas {
         lastrefillDate: Timestamp.fromDate(DateTime(2021, 2, 1)),
         dateOfStart: Timestamp.fromDate(DateTime(2021, 2, 1)),
         geoPoint: GeoPoint(40.74208988065302, 30.331658114158387)),
-    RecyclerBox(
+    RecycleBox(
         boxId: '0002',
         fulness: 35.2,
         city: 54,
@@ -27,7 +32,7 @@ class LocalDatas {
         lastrefillDate: Timestamp.fromDate(DateTime(2021, 2, 15)),
         dateOfStart: Timestamp.fromDate(DateTime(2021, 2, 1)),
         geoPoint: GeoPoint(40.740553527803414, 30.32983421199624)),
-    RecyclerBox(
+    RecycleBox(
         boxId: '0003',
         fulness: 22.2,
         city: 54,
@@ -39,7 +44,7 @@ class LocalDatas {
         lastrefillDate: Timestamp.fromDate(DateTime(2021, 2, 15)),
         dateOfStart: Timestamp.fromDate(DateTime(2021, 2, 1)),
         geoPoint: GeoPoint(40.74138764603933, 30.327602056878494)),
-    RecyclerBox(
+    RecycleBox(
         boxId: '0004',
         fulness: 0.40,
         city: 54,
@@ -51,7 +56,7 @@ class LocalDatas {
         lastrefillDate: Timestamp.fromDate(DateTime(2021, 2, 15)),
         dateOfStart: Timestamp.fromDate(DateTime(2021, 2, 1)),
         geoPoint: GeoPoint(40.74219582918398, 30.32845962639581)),
-    RecyclerBox(
+    RecycleBox(
         boxId: '0005',
         fulness: 3.30,
         city: 54,
@@ -63,7 +68,7 @@ class LocalDatas {
         lastrefillDate: Timestamp.fromDate(DateTime(2021, 2, 15)),
         dateOfStart: Timestamp.fromDate(DateTime(2021, 2, 1)),
         geoPoint: GeoPoint(40.7427385927429, 30.3271848899422)),
-    RecyclerBox(
+    RecycleBox(
         boxId: '0006',
         fulness: 98.2,
         city: 54,
@@ -75,7 +80,7 @@ class LocalDatas {
         lastrefillDate: Timestamp.fromDate(DateTime(2021, 2, 15)),
         dateOfStart: Timestamp.fromDate(DateTime(2021, 2, 1)),
         geoPoint: GeoPoint(40.74374266069149, 30.32813848519973)),
-    RecyclerBox(
+    RecycleBox(
         boxId: '0007',
         fulness: 67.2,
         city: 54,
@@ -87,7 +92,7 @@ class LocalDatas {
         lastrefillDate: Timestamp.fromDate(DateTime(2021, 2, 15)),
         dateOfStart: Timestamp.fromDate(DateTime(2021, 2, 1)),
         geoPoint: GeoPoint(40.743819388256945, 30.329787976470957)),
-    RecyclerBox(
+    RecycleBox(
         boxId: '0008',
         fulness: 45.8,
         city: 54,
@@ -99,7 +104,7 @@ class LocalDatas {
         lastrefillDate: Timestamp.fromDate(DateTime(2021, 2, 15)),
         dateOfStart: Timestamp.fromDate(DateTime(2021, 2, 1)),
         geoPoint: GeoPoint(40.744214709887494, 30.331246102715607)),
-    RecyclerBox(
+    RecycleBox(
         boxId: '0009',
         fulness: 57.2,
         city: 54,
@@ -111,7 +116,7 @@ class LocalDatas {
         lastrefillDate: Timestamp.fromDate(DateTime(2021, 2, 15)),
         dateOfStart: Timestamp.fromDate(DateTime(2021, 2, 1)),
         geoPoint: GeoPoint(40.742645133974285, 30.333496179103673)),
-    RecyclerBox(
+    RecycleBox(
         boxId: '0010',
         fulness: 33.5,
         city: 54,
@@ -123,7 +128,7 @@ class LocalDatas {
         lastrefillDate: Timestamp.fromDate(DateTime(2021, 2, 15)),
         dateOfStart: Timestamp.fromDate(DateTime(2021, 2, 1)),
         geoPoint: GeoPoint(40.74166921040111, 30.332909451979866)),
-    RecyclerBox(
+    RecycleBox(
         boxId: '0011',
         fulness: 80.3,
         city: 54,
@@ -135,7 +140,7 @@ class LocalDatas {
         lastrefillDate: Timestamp.fromDate(DateTime(2021, 2, 15)),
         dateOfStart: Timestamp.fromDate(DateTime(2021, 2, 1)),
         geoPoint: GeoPoint(40.7444356551526, 30.33452304786773)),
-    RecyclerBox(
+    RecycleBox(
         boxId: '0012',
         fulness: 12.7,
         city: 54,
@@ -147,7 +152,7 @@ class LocalDatas {
         lastrefillDate: Timestamp.fromDate(DateTime(2021, 2, 15)),
         dateOfStart: Timestamp.fromDate(DateTime(2021, 2, 1)),
         geoPoint: GeoPoint(40.7432730664166, 30.33798920584157)),
-    RecyclerBox(
+    RecycleBox(
         boxId: '0013',
         fulness: 55.9,
         city: 54,
@@ -159,7 +164,7 @@ class LocalDatas {
         lastrefillDate: Timestamp.fromDate(DateTime(2021, 2, 15)),
         dateOfStart: Timestamp.fromDate(DateTime(2021, 2, 1)),
         geoPoint: GeoPoint(40.740619552458725, 30.336066571440682)),
-    RecyclerBox(
+    RecycleBox(
         boxId: '0014',
         fulness: 34.4,
         city: 54,
@@ -171,7 +176,7 @@ class LocalDatas {
         lastrefillDate: Timestamp.fromDate(DateTime(2021, 2, 15)),
         dateOfStart: Timestamp.fromDate(DateTime(2021, 2, 1)),
         geoPoint: GeoPoint(40.73970994727285, 30.333448899928847)),
-    RecyclerBox(
+    RecycleBox(
         boxId: '0015',
         fulness: 0.0,
         city: 54,
@@ -183,5 +188,20 @@ class LocalDatas {
         lastrefillDate: Timestamp.fromDate(DateTime(2021, 2, 15)),
         dateOfStart: Timestamp.fromDate(DateTime(2021, 2, 1)),
         geoPoint: GeoPoint(40.74065374788451, 30.331661662243818)),
+  ];
+
+  List<Account> userList = [
+    Account(avatar: _manAvatar, nameAndSurname: 'VB10', point: 2453),
+    Account(
+        avatar: _manAvatar, nameAndSurname: 'Levent Kantaroğlu', point: 2154),
+    Account(avatar: _manAvatar, nameAndSurname: 'Sadık Şener', point: 1456),
+    Account(avatar: _manAvatar, nameAndSurname: 'Onur Kitap', point: 2023),
+    Account(avatar: _girlAvatar, nameAndSurname: 'Buse Akyüz', point: 1765),
+    Account(avatar: _manAvatar, nameAndSurname: 'Buğra Göksu', point: 1343),
+    Account(avatar: _girlAvatar, nameAndSurname: 'Dilan Acun', point: 1246),
+    Account(avatar: _girlAvatar, nameAndSurname: 'Mira Küçük', point: 2655),
+    Account(avatar: _girlAvatar, nameAndSurname: 'Nisanur Soydaş', point: 1678),
+    Account(
+        avatar: _manAvatar, nameAndSurname: 'Egemen Kağan Duman', point: 1516),
   ];
 }
