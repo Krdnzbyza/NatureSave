@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -32,7 +33,7 @@ class MyApp extends StatelessWidget {
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
         title: 'NatureSave',
-        home: WelcomeScreen(),
+        home: ProfilScreen(),
         theme: ThemeData.light().copyWith(
           appBarTheme: AppBarTheme(
             color: const Color(0xFF1ad760),
