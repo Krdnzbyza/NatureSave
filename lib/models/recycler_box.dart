@@ -4,76 +4,76 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 
 class RecyclerBox {
   String boxId;
-  String geoh;
   double fulness;
   int city;
   int province;
   int street;
   int bagCount;
+  int bottleCount;
   Timestamp lastCleanDate;
   Timestamp lastrefillDate;
-  Timestamp lastBottleCount;
   Timestamp dateOfStart;
   GeoPoint geoPoint;
+  String geohash;
   RecyclerBox({
     this.boxId,
-    this.geoh,
     this.fulness,
     this.city,
     this.province,
     this.street,
     this.bagCount,
+    this.bottleCount,
     this.lastCleanDate,
     this.lastrefillDate,
-    this.lastBottleCount,
     this.dateOfStart,
     this.geoPoint,
+    this.geohash,
   });
 
   RecyclerBox copyWith({
     String boxId,
-    String geoh,
     double fulness,
     int city,
     int province,
     int street,
     int bagCount,
+    int bottleCount,
     Timestamp lastCleanDate,
     Timestamp lastrefillDate,
-    Timestamp lastBottleCount,
     Timestamp dateOfStart,
     GeoPoint geoPoint,
+    String geohash,
   }) {
     return RecyclerBox(
       boxId: boxId ?? this.boxId,
-      geoh: geoh ?? this.geoh,
       fulness: fulness ?? this.fulness,
       city: city ?? this.city,
       province: province ?? this.province,
       street: street ?? this.street,
       bagCount: bagCount ?? this.bagCount,
+      bottleCount: bottleCount ?? this.bottleCount,
       lastCleanDate: lastCleanDate ?? this.lastCleanDate,
       lastrefillDate: lastrefillDate ?? this.lastrefillDate,
-      lastBottleCount: lastBottleCount ?? this.lastBottleCount,
       dateOfStart: dateOfStart ?? this.dateOfStart,
       geoPoint: geoPoint ?? this.geoPoint,
+      geohash: geohash ?? this.geohash,
     );
   }
 
   Map<String, dynamic> toMap() {
     return {
       'boxId': boxId,
-      'geoh': geoh,
       'fulness': fulness,
       'city': city,
       'province': province,
       'street': street,
       'bagCount': bagCount,
+      'bottleCount': bottleCount,
       'lastCleanDate': lastCleanDate,
       'lastrefillDate': lastrefillDate,
-      'lastBottleCount': lastBottleCount,
       'dateOfStart': dateOfStart,
       'geoPoint': geoPoint,
+      'geohash': geohash,
     };
   }
 
@@ -82,17 +82,17 @@ class RecyclerBox {
 
     return RecyclerBox(
       boxId: map['boxId'],
-      geoh: map['geoh'],
       fulness: map['fulness'],
       city: map['city'],
       province: map['province'],
       street: map['street'],
       bagCount: map['bagCount'],
+      bottleCount: map['bottleCount'],
       lastCleanDate: map['lastCleanDate'],
       lastrefillDate: map['lastrefillDate'],
-      lastBottleCount: map['lastBottleCount'],
       dateOfStart: map['dateOfStart'],
       geoPoint: map['geoPoint'],
+      geohash: map['geohash'],
     );
   }
 
@@ -103,7 +103,7 @@ class RecyclerBox {
 
   @override
   String toString() {
-    return 'RecyclerBox(boxId: $boxId, geoh: $geoh, fulness: $fulness, city: $city, province: $province, street: $street, bagCount: $bagCount, lastCleanDate: $lastCleanDate, lastrefillDate: $lastrefillDate, lastBottleCount: $lastBottleCount, dateOfStart: $dateOfStart, geoPoint: $geoPoint)';
+    return 'RecyclerBox(boxId: $boxId, fulness: $fulness, city: $city, province: $province, street: $street, bagCount: $bagCount, bottleCount: $bottleCount, lastCleanDate: $lastCleanDate, lastrefillDate: $lastrefillDate, dateOfStart: $dateOfStart, geoPoint: $geoPoint, geohash: $geohash)';
   }
 
   @override
@@ -112,32 +112,32 @@ class RecyclerBox {
 
     return o is RecyclerBox &&
         o.boxId == boxId &&
-        o.geoh == geoh &&
         o.fulness == fulness &&
         o.city == city &&
         o.province == province &&
         o.street == street &&
         o.bagCount == bagCount &&
+        o.bottleCount == bottleCount &&
         o.lastCleanDate == lastCleanDate &&
         o.lastrefillDate == lastrefillDate &&
-        o.lastBottleCount == lastBottleCount &&
         o.dateOfStart == dateOfStart &&
-        o.geoPoint == geoPoint;
+        o.geoPoint == geoPoint &&
+        o.geohash == geohash;
   }
 
   @override
   int get hashCode {
     return boxId.hashCode ^
-        geoh.hashCode ^
         fulness.hashCode ^
         city.hashCode ^
         province.hashCode ^
         street.hashCode ^
         bagCount.hashCode ^
+        bottleCount.hashCode ^
         lastCleanDate.hashCode ^
         lastrefillDate.hashCode ^
-        lastBottleCount.hashCode ^
         dateOfStart.hashCode ^
-        geoPoint.hashCode;
+        geoPoint.hashCode ^
+        geohash.hashCode;
   }
 }

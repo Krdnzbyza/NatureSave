@@ -8,7 +8,6 @@ import 'package:naturesave/models/account.dart';
 import 'package:naturesave/ui/profile/profile_screen.dart';
 import 'package:naturesave/ui/welcome_screen.dart';
 import 'package:provider/provider.dart';
-import 'ui/root_screen.dart';
 import 'viewmodels/account_provider.dart';
 
 void main() async {
@@ -31,14 +30,10 @@ class MyApp extends StatelessWidget {
         ),
       ],
       child: MaterialApp(
-        title: 'Material App',
-        home: ProfileScreen(
-          account: Account(),
-        ),
+        debugShowCheckedModeBanner: false,
+        title: 'NatureSave',
+        home: WelcomeScreen(),
         theme: ThemeData.light().copyWith(
-          textTheme: TextTheme(
-            bodyText1: GoogleFonts.notoSans(),
-          ),
           appBarTheme: AppBarTheme(
             color: const Color(0xFF1ad760),
           ),

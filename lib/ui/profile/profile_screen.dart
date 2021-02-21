@@ -3,19 +3,19 @@ import 'package:eva_icons_flutter/icon_data.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:naturesave/models/account.dart';
+import 'package:naturesave/viewmodels/account_provider.dart';
+import 'package:provider/provider.dart';
 
 class ProfileScreen extends StatefulWidget {
-  final Account account;
-
-  const ProfileScreen({Key key, this.account}) : super(key: key);
-
   @override
   _ProfileScreenState createState() => _ProfileScreenState();
 }
 
 class _ProfileScreenState extends State<ProfileScreen> {
+  AccountProvider _accountProvider;
   @override
   Widget build(BuildContext context) {
+    _accountProvider = Provider.of<AccountProvider>(context);
     return Scaffold(
       body: Padding(
         padding: const EdgeInsets.only(top: 60.0),
@@ -24,13 +24,13 @@ class _ProfileScreenState extends State<ProfileScreen> {
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: <Widget>[
               CircleAvatar(
-                backgroundImage: widget.account.avatar != null
-                    ? NetworkImage(widget.account.avatar)
+                backgroundImage: _accountProvider.currentAccount.avatar != null
+                    ? NetworkImage(_accountProvider.currentAccount.avatar)
                     : null,
-                child: widget.account.avatar != null
+                child: _accountProvider.currentAccount.avatar != null
                     ? null
                     : Icon(EvaIcons.person),
-                radius: 80.0,
+                radius: 75.0,
               ),
               Text('Beyza Karadeniz',
                   style: Theme.of(context)
