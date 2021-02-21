@@ -8,7 +8,7 @@ class GlobalVariables {
   String recBoxIconPath = 'asset/images/rec_box.png';
   String fulness = 'Doluluk Oranı';
   String bagCount = 'Poşet Sayısı';
-  String bottleCount = 'Poşet Sayısı';
+  String bottleCount = 'Şişe Sayısı';
   String takeBagorBottle = 'Poşet veya Şişe Al';
   String usersOfWeek = 'Haftanın Kullanıcıları';
 
