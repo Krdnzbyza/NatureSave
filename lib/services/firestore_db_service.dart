@@ -285,4 +285,12 @@ class FirestoreDbService {
       return null;
     }
   }
+
+  List<String> getDonateList() {
+    try {
+      return _localDatas.donateList;
+    } catch (e) {
+      return null;
+    }
+  }
 }

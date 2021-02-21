@@ -34,4 +34,9 @@ class RecycleBoxProvider extends ChangeNotifier {
     allBox = _databaseRepository.fetchRecycleBox();
     state = RecycleBoxState.Idle;
   }
+
+  List<String> donateList() {
+    var dList = _databaseRepository.getDonateList();
+    return dList;
+  }
 }

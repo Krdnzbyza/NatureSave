@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:naturesave/core/constans/app/global_variables.dart';
+import 'package:naturesave/core/constans/locator.dart';
 import 'package:naturesave/models/account.dart';
 import 'package:naturesave/viewmodels/account_provider.dart';
 import 'package:provider/provider.dart';
@@ -15,6 +17,7 @@ class _LeaderBoardScreenState extends State<LeaderBoardScreen> {
   @override
   Widget build(BuildContext context) {
     _accountProvider = Provider.of<AccountProvider>(context);
+    var _globalVariables = locator.get<GlobalVariables>();
 
     return Scaffold(
       body: SafeArea(
@@ -25,7 +28,7 @@ class _LeaderBoardScreenState extends State<LeaderBoardScreen> {
               Padding(
                 padding: const EdgeInsets.all(16.0),
                 child: Text(
-                  'Haftanın Kullanıcıları',
+                  _globalVariables.usersOfWeek,
                   style: TextStyle(fontSize: 22),
                 ),
               ),

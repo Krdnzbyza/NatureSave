@@ -1,4 +1,5 @@
 import 'dart:convert';
+
 import 'package:cloud_firestore/cloud_firestore.dart';
 
 class Account {
@@ -12,6 +13,7 @@ class Account {
   int totalUsedBag;
   int totalUsedBottom;
   int point;
+  int totalDonate;
   bool isBanned;
   bool isDeleted;
   bool isFrozed;
@@ -28,6 +30,7 @@ class Account {
     this.totalUsedBag,
     this.totalUsedBottom,
     this.point,
+    this.totalDonate,
     this.isBanned,
     this.isDeleted,
     this.isFrozed,
@@ -46,6 +49,7 @@ class Account {
     int totalUsedBag,
     int totalUsedBottom,
     int point,
+    int totalDonate,
     bool isBanned,
     bool isDeleted,
     bool isFrozed,
@@ -63,6 +67,7 @@ class Account {
       totalUsedBag: totalUsedBag ?? this.totalUsedBag,
       totalUsedBottom: totalUsedBottom ?? this.totalUsedBottom,
       point: point ?? this.point,
+      totalDonate: totalDonate ?? this.totalDonate,
       isBanned: isBanned ?? this.isBanned,
       isDeleted: isDeleted ?? this.isDeleted,
       isFrozed: isFrozed ?? this.isFrozed,
@@ -83,6 +88,7 @@ class Account {
       'totalUsedBag': totalUsedBag,
       'totalUsedBottom': totalUsedBottom,
       'point': point,
+      'totalDonate': totalDonate,
       'isBanned': isBanned,
       'isDeleted': isDeleted,
       'isFrozed': isFrozed,
@@ -105,6 +111,7 @@ class Account {
       totalUsedBag: map['totalUsedBag'],
       totalUsedBottom: map['totalUsedBottom'],
       point: map['point'],
+      totalDonate: map['totalDonate'],
       isBanned: map['isBanned'],
       isDeleted: map['isDeleted'],
       isFrozed: map['isFrozed'],
@@ -120,7 +127,7 @@ class Account {
 
   @override
   String toString() {
-    return 'Account(userId: $userId, emailAddress: $emailAddress, password: $password, nameAndSurname: $nameAndSurname, avatar: $avatar, geoHash: $geoHash, geoPoint: $geoPoint, totalUsedBag: $totalUsedBag, totalUsedBottom: $totalUsedBottom, point: $point, isBanned: $isBanned, isDeleted: $isDeleted, isFrozed: $isFrozed, creationDate: $creationDate, deletionDate: $deletionDate)';
+    return 'Account(userId: $userId, emailAddress: $emailAddress, password: $password, nameAndSurname: $nameAndSurname, avatar: $avatar, geoHash: $geoHash, geoPoint: $geoPoint, totalUsedBag: $totalUsedBag, totalUsedBottom: $totalUsedBottom, point: $point, totalDonate: $totalDonate, isBanned: $isBanned, isDeleted: $isDeleted, isFrozed: $isFrozed, creationDate: $creationDate, deletionDate: $deletionDate)';
   }
 
   @override
@@ -138,6 +145,7 @@ class Account {
         o.totalUsedBag == totalUsedBag &&
         o.totalUsedBottom == totalUsedBottom &&
         o.point == point &&
+        o.totalDonate == totalDonate &&
         o.isBanned == isBanned &&
         o.isDeleted == isDeleted &&
         o.isFrozed == isFrozed &&
@@ -157,6 +165,7 @@ class Account {
         totalUsedBag.hashCode ^
         totalUsedBottom.hashCode ^
         point.hashCode ^
+        totalDonate.hashCode ^
         isBanned.hashCode ^
         isDeleted.hashCode ^
         isFrozed.hashCode ^

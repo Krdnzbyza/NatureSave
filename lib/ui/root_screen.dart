@@ -34,7 +34,7 @@ class _RootScreenState extends State<RootScreen> with TickerProviderStateMixin {
             children: <Widget>[
               Expanded(
                 child: PageView(
-                  children: [MapScreen(), LeaderBoardScreen(), ProfileScreen()],
+                  children: [MapScreen(), LeaderBoardScreen(), ProfilScreen()],
                   physics: NeverScrollableScrollPhysics(),
                   controller: _pageController,
                 ),

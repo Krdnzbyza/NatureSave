@@ -3,9 +3,9 @@ import 'package:naturesave/models/account.dart';
 import 'package:naturesave/models/recycler_box.dart';
 
 class LocalDatas {
-  static const String _girlAvatar =
+  static const String girlAvatar =
       'https://i.pinimg.com/originals/2d/f7/df/2df7df421c88f37cb0385bb1f55a989c.png';
-  static const String _manAvatar =
+  static const String manAvatar =
       'https://image.winudf.com/v2/image1/Y29tLmJ1bnR5YXBweC5hdnRhcm1ha2VyX3NjcmVlbl8wXzE1NjM0OTUwODFfMDg3/screen-0.jpg?fakeurl=1&type=.jpg';
   List<RecycleBox> boxList = [
     RecycleBox(
@@ -191,17 +191,37 @@ class LocalDatas {
   ];
 
   List<Account> userList = [
-    Account(avatar: _manAvatar, nameAndSurname: 'VB10', point: 2453),
+    Account(avatar: manAvatar, nameAndSurname: 'VB10', point: 2453),
     Account(
-        avatar: _manAvatar, nameAndSurname: 'Levent Kantaroğlu', point: 2154),
-    Account(avatar: _manAvatar, nameAndSurname: 'Sadık Şener', point: 1456),
-    Account(avatar: _manAvatar, nameAndSurname: 'Onur Kitap', point: 2023),
-    Account(avatar: _girlAvatar, nameAndSurname: 'Buse Akyüz', point: 1765),
-    Account(avatar: _manAvatar, nameAndSurname: 'Buğra Göksu', point: 1343),
-    Account(avatar: _girlAvatar, nameAndSurname: 'Dilan Acun', point: 1246),
-    Account(avatar: _girlAvatar, nameAndSurname: 'Mira Küçük', point: 2655),
-    Account(avatar: _girlAvatar, nameAndSurname: 'Nisanur Soydaş', point: 1678),
+        avatar: manAvatar, nameAndSurname: 'Levent Kantaroğlu', point: 2154),
+    Account(avatar: manAvatar, nameAndSurname: 'Sadık Şener', point: 1456),
+    Account(avatar: manAvatar, nameAndSurname: 'Onur Kitap', point: 2023),
+    Account(avatar: girlAvatar, nameAndSurname: 'Buse Akyüz', point: 1765),
+    Account(avatar: manAvatar, nameAndSurname: 'Buğra Göksu', point: 1343),
+    Account(avatar: girlAvatar, nameAndSurname: 'Dilan Acun', point: 1246),
+    Account(avatar: girlAvatar, nameAndSurname: 'Mira Küçük', point: 2655),
+    Account(avatar: girlAvatar, nameAndSurname: 'Nisanur Soydaş', point: 1678),
     Account(
-        avatar: _manAvatar, nameAndSurname: 'Egemen Kağan Duman', point: 1516),
+        avatar: manAvatar, nameAndSurname: 'Egemen Kağan Duman', point: 1516),
+  ];
+
+  List<String> donateList = [
+    'https://sustainabledevelopment.un.org/content/sdgsummit/images/E_SDG%20goals_icons-individual-rgb-01.png',
+    'https://sustainabledevelopment.un.org/content/sdgsummit/images/E_SDG%20goals_icons-individual-rgb-02.png',
+    'https://sustainabledevelopment.un.org/content/sdgsummit/images/E_SDG%20goals_icons-individual-rgb-03.png',
+    'https://sustainabledevelopment.un.org/content/sdgsummit/images/E_SDG%20goals_icons-individual-rgb-04.png',
+    'https://sustainabledevelopment.un.org/content/sdgsummit/images/E_SDG%20goals_icons-individual-rgb-05.png',
+    'https://sustainabledevelopment.un.org/content/sdgsummit/images/E_SDG%20goals_icons-individual-rgb-06.png',
+    'https://sustainabledevelopment.un.org/content/sdgsummit/images/E_SDG%20goals_icons-individual-rgb-07.png',
+    'https://sustainabledevelopment.un.org/content/sdgsummit/images/E_SDG%20goals_icons-individual-rgb-08.png',
+    'https://sustainabledevelopment.un.org/content/sdgsummit/images/E_SDG%20goals_icons-individual-rgb-09.png',
+    'https://sustainabledevelopment.un.org/content/sdgsummit/images/E_SDG%20goals_icons-individual-rgb-10.png',
+    'https://sustainabledevelopment.un.org/content/sdgsummit/images/E_SDG%20goals_icons-individual-rgb-11.png',
+    'https://sustainabledevelopment.un.org/content/sdgsummit/images/E_SDG%20goals_icons-individual-rgb-12.png',
+    'https://sustainabledevelopment.un.org/content/sdgsummit/images/E_SDG%20goals_icons-individual-rgb-13.png',
+    'https://sustainabledevelopment.un.org/content/sdgsummit/images/E_SDG%20goals_icons-individual-rgb-14.png',
+    'https://sustainabledevelopment.un.org/content/sdgsummit/images/E_SDG%20goals_icons-individual-rgb-15.png',
+    'https://sustainabledevelopment.un.org/content/sdgsummit/images/E_SDG%20goals_icons-individual-rgb-16.png',
+    'https://sustainabledevelopment.un.org/content/sdgsummit/images/E_SDG%20goals_icons-individual-rgb-17.png',
   ];
 }
